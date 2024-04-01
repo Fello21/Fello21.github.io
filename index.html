@@ -21,15 +21,15 @@
 </head>
 
 <body>
-    <header class="info-me">
-        <h1 class="main-title">
+    <header class="infome">
+        <h1 class="infome__title">
             Все о теплоэнергетике
         </h1>
-        <h2 id="about-me">
+        <h2 class="infome__about">
             Обо мне
         </h2>
-        <section class="about-me__text">
-            <p class="about-me__text-item">
+        <section class="infome__text">
+            <p>
                 Я, <strong>Салихов Феликс</strong>, заканчиваю магистратуру по направлению <a
                     href="https://abiturient.tpu.ru/direction/programs/130301">"Теплоэнергетика и теплотехника"</a> в
                 Томском Политехническом Университете, серебряный медалист в олимпиаде "Я-профессионал" по данному
@@ -37,17 +37,17 @@
                 серебряный медалист международного чемпионата "Case-In" также по данному направлению.
                 Расскажу физические основы и то откуда берется электричество у вас дома.
             </p>
-            <p class="about-me__text-item">
+            <p>
                 Удивительно, но в действительности теплоэнергетики, как и электроэнергетики тоже занимаются
                 производством
                 электрической энергии.
                 Главное отличие — это генерация тепловой энергии в виде отопления и горячего водоснабжения.
             </p>
         </section>
-        <img id="My-photo" src="./assets/Я.png" alt="Мое фото">
+        <img src="./assets/Я.png" alt="Мое фото" class="infome__photo" id="#photo">
     </header>
 
-    <main class="">
+    <main class="main">
 
         <h2 id="physics">
             Физические основы теплоэнергетики
@@ -197,14 +197,15 @@
                 <li class="navig__list-item"><a href="#heatexchanger">Теплообменное оборудование</a></li>
                 <li class="navig__list-item"><a href="#energy">Процесс производства электро- и тепловой энергии</a></li>
                 <li class="navig__list-item"><a href="#test">Проверь себя</a></li>
+                <li class="navig__list-item"><a href="#contacts">Связь со сной</a></li>
             </ul>
         </nav>
     </aside>
 
-    <section">
-        <h2 id="test">Проверь себя</h2>
-        Вопрос №1. Какое главное отличие теплоэнергетики от электроэнергетики?
-        <form>
+    <section class="test">
+        <h2 id="test" class="test__title">Проверь себя</h2>
+        <h3 class="test__item">Вопрос №1. Какое главное отличие теплоэнергетики от электроэнергетики?</h3>
+        <form class="test__item-form">
             <label>
                 <input type="radio" name="q1">
                 1. Электичество производится разными способами
@@ -219,8 +220,8 @@
             </label>
         </form>
 
-        Вопрос №2. Какое начало термодинамики отвечает за направление передачи теплоты?
-        <form>
+        <h3 class="test__item">Вопрос №2. Какое начало термодинамики отвечает за направление передачи теплоты?</h3>
+        <form class="test__item-form">
             <label>
                 <input type="radio" name="q2">
                 1. "Минус" первое
@@ -247,8 +248,8 @@
             </label>
         </form>
 
-        Вопрос №3. В каком агрегатном состоянии явление теплопроводности влияет вильнее всего?
-        <form>
+        <h3 class="test__item">Вопрос №3. В каком агрегатном состоянии явление теплопроводности влияет вильнее всего?</h3>
+        <form class="test__item-form">
             <label>
                 <input type="radio" name="q3">
                 1. Плазма
@@ -267,8 +268,8 @@
             </label>
         </form>
 
-        Вопрос №4. За счет чего может передается теплота в поверхностных теплообменниках?
-        <form>
+        <h3 class="test__item">Вопрос №4. За счет чего может передается теплота в поверхностных теплообменниках?</h3>
+        <form class="test__item-form">
             <label>
                 <input type="radio" name="q4">
                 1. Теплопроводность
@@ -287,8 +288,8 @@
             </label>
         </form>
 
-        Вопрос №5. Какой из элементов схемы вращает электрогенератор?
-        <form>
+        <h3 class="test__item">Вопрос №5. Какой из элементов схемы вращает электрогенератор?</h3>
+        <form class="test__item-form">
             <label>
                 <input type="radio" name="q5">
                 1. Насос основого конденсата (6)
@@ -303,17 +304,17 @@
             </label>
         </form>
 
-        <button type="button">
+        <button type="button" class="test__btn">
             Проверить
         </button>
 
-        <button type="reset">
+        <button type="reset" class="test__btn">
             Заново⟲
         </button>
         </section>
 
         <footer>
-            <h2>Связь со мной</h2>
+            <h2 id="contacts">Связь со мной</h2>
             <div>
                 <a href="7983233-XX-XX">7 (983) 233-XX-XX</a> <br>
                 <a href="fys2@xxx.xx">fys2@xxx.xx</a>
