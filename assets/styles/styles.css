@@ -27,7 +27,7 @@ main {
 header {
   background: url("../ТЭС.jpg");
   width: 100vw;
-  height: 70vh;
+  height: 50vh;
   padding: 10px;
 }
 
@@ -55,7 +55,7 @@ main {
   list-style: none;
   padding: 10px;
   margin: 0;
-  width: 500px;
+  width: fit-content;
 }
 .navig__list-item {
   margin: 5px;
@@ -82,26 +82,51 @@ button:active {
   background-color: #ee6a59;
 }
 
-/* Text */
-header p {
-  width: 700px;
-  font-weight: 500;
+/* Text + img */
+
+img {
+  width: 30vw;
 }
 p {
-  width: 1300px;
+  width: 80%;
+}
+/* Footer */
+.footer {
+  background-image: url(/assets/ЛЭП.png);
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0 0 0;
+}
+.footer__content {
+  color: #ece6cd;
+  padding: 5px 5px 5px 5px;
+}
+.footer__content a {
+  text-decoration: none;
+  color: #ece6cd;
+}
+.footer__content a:hover {
+  color: #f9ac67;
 }
 
 /* Flexbox */
 .infome {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 450px;
+  justify-content: flex-start;
+  gap: 3vw;
+  height: fit-content;
+}
+.infome__text p {
+  margin: 0 0 5px 0;
+  width: fit-content;
 }
 .infome__photo {
   width: 400px;
-  position:relative;
-  right: 20%;
+  height: 450px;
+  border-radius: 16px;
 }
 .infome__title {
   position: relative;
@@ -114,7 +139,11 @@ p {
   height: 2px;
   background: black;
   top: 50%;
-  right: -24px;
+  right: -5%;
+}
+.infome__text {
+  width: 40vw;
+  font-weight: 500;
 }
 
 /* Grid */
@@ -126,6 +155,8 @@ p {
 .test__item {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  margin: 0px;
 }
 .test__item-form {
   display: flex;
@@ -143,20 +174,3 @@ p {
   height: 25px;
   left: 47vw;
 }
-
-/* Media */
- @media only screen and (max-width: 1280px) {
-  p {
-    width: 70vw;
-  }
-  .infome__photo {
-    right: 10%;
-    width: 300px;
-  }
-  .navig__list {
-    width: fit-content;
-  }
-  .navig__list-item {
-    width: 200px;
-  }
- }
