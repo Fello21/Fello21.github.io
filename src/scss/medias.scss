@@ -1,0 +1,102 @@
+@import "./variable.scss";
+@import "./mixins.scss";
+
+/* Media */
+@media only screen and (max-width: 1280px) {
+  p {
+    width: 70vw;
+  }
+  .infome {
+    height: 70vh;
+
+    &__text {
+      @include glass(
+        $background-infome__text,
+        $blur+7px,
+        $blur,
+        $background-infome__text
+      );
+      padding: 10px 0 0 10px;
+    }
+
+    &__photo {
+      right: 10%;
+      width: 290px;
+      height: 300px;
+    }
+  }
+  .navig {
+    margin: 0 10px 0 10px;
+    &__list {
+      width: fit-content;
+
+      &-item {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navig__list {
+    display: flex;
+    padding: 1px 5px 1px 5px;
+
+    &-item {
+      width: fit-content;
+    }
+  }
+
+  .infome {
+    height: 95vh;
+    align-items: end;
+  }
+  .schema {
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .infome__text {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navig {
+    &__list {
+      width: 95vw;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .infome {
+    height: 180vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+    &__text {
+      width: 90vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navig {
+    right: 2.5%;
+
+    &__list-item {
+      text-align: center;
+    }
+  }
+  .infome {
+    height: 225vh;
+
+    &__title::after {
+      top: 75%;
+      right: 5%;
+    }
+  }
+}

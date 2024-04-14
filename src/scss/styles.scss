@@ -1,0 +1,187 @@
+@import "./variable.scss";
+@import "./mixins.scss";
+
+/* Styles */
+* {
+  box-sizing: border-box;
+}
+h1,
+h2 {
+  margin: 0px 0px 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main {
+  background-image: linear-gradient(180deg, #ece6cd, white);
+}
+
+header {
+  background: url("../assets/ТЭС.jpg");
+  width: 100vw;
+  height: 50vh;
+  padding: 10px;
+  & a {
+    color: black;
+    font-style: italic;
+    :hover {
+      color: #f9ac67;
+    }
+  }
+}
+
+main {
+  padding: 10px;
+}
+
+/* Navigation */
+.navig {
+  @include glass($background-nav, 16px, 4px, $background-nav);
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  z-index: 1;
+
+  &__list {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
+
+    &-item {
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    & a {
+      text-decoration: none;
+      color: white;
+      font-weight: 400;
+
+      :hover {
+        color: #ece6cd;
+      }
+    }
+  }
+}
+
+/* Buttons */
+button {
+  background-color: #ece6cd;
+  border-radius: 5px;
+  &:hover {
+    background-color: #f9ac67;
+  }
+  &:active {
+    background-color: #ee6a59;
+  }
+}
+
+/* Text + img */
+
+img {
+  width: 30vw;
+}
+p {
+  width: 80%;
+}
+
+/* Footer */
+.footer {
+  background-image: url(../assets/ЛЭП.png);
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0 0 0;
+
+  &__content {
+    @include glass($background-nav, 16px, 5px, $background-nav);
+    color: #ece6cd;
+    padding: 5px 5px 5px 5px;
+
+    & a {
+      text-decoration: none;
+      color: #ece6cd;
+
+      :hover {
+        color: #f9ac67;
+      }
+    }
+  }
+}
+
+/* Flexbox */
+.infome {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3vw;
+  height: fit-content;
+
+  &__text {
+    width: 40vw;
+    font-weight: 500;
+
+    & p {
+      margin: 0 0 5px 0;
+      width: fit-content;
+    }
+  }
+
+  &__photo {
+    width: 400px;
+    height: 450px;
+    border-radius: 16px;
+  }
+
+  &__title {
+    position: relative;
+    width: fit-content;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 2px;
+      background: black;
+      top: 50%;
+      right: -5%;
+    }
+  }
+}
+
+/* Grid */
+.test {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0px;
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 /3;
+  }
+
+  &__btn {
+    position: relative;
+    grid-column: 1/3;
+    width: 100px;
+    height: 25px;
+    left: 47vw;
+  }
+}
