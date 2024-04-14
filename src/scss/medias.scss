@@ -8,7 +8,7 @@
   }
   .infome {
     min-height: fit-content;
-
+    
     &__text {
       @include glass(
         $background-infome__text,
