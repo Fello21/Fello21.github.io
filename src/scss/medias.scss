@@ -79,11 +79,6 @@
   .infome {
     flex-direction: column;
     align-items: center;
-    justify-content: end;
-
-    &__content {
-      margin: 170px 0 0 0;
-    }
 
     &__text {
       width: 90vw;
@@ -100,9 +95,6 @@
     }
   }
   .infome {
-    &__content {
-      margin: 205px 0 0 0;
-    }
     &__title::after {
       top: 75%;
       right: 5%;
