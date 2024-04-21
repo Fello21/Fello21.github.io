@@ -7,12 +7,12 @@
     width: 70vw;
   }
   .infome {
-    height: 70vh;
-
+    min-height: fit-content;
+    
     &__text {
       @include glass(
         $background-infome__text,
-        $blur+7px,
+        $blur + 7px,
         $blur,
         $background-infome__text
       );
@@ -25,6 +25,7 @@
       height: 300px;
     }
   }
+
   .navig {
     margin: 0 10px 0 10px;
     &__list {
@@ -48,8 +49,12 @@
   }
 
   .infome {
-    height: 95vh;
+    min-height: fit-content;
     align-items: end;
+
+    &__content {
+      margin: 45px 0 0 0;
+    }
   }
   .schema {
     min-width: 300px;
@@ -72,10 +77,13 @@
   }
 
   .infome {
-    height: 180vh;
     flex-direction: column;
     align-items: center;
     justify-content: end;
+
+    &__content {
+      margin: 170px 0 0 0;
+    }
 
     &__text {
       width: 90vw;
@@ -92,8 +100,9 @@
     }
   }
   .infome {
-    height: 225vh;
-
+    &__content {
+      margin: 205px 0 0 0;
+    }
     &__title::after {
       top: 75%;
       right: 5%;
