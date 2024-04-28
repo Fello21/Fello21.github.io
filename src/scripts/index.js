@@ -23,7 +23,7 @@ if (firstTry == null) {
 
 const calculateSore = () => {
 
-  tryNumber = localStorage.getItem("tryNumber");
+  let tryNumber = localStorage.getItem("tryNumber");
 
   let totalScore = 0;
 
@@ -36,12 +36,11 @@ const calculateSore = () => {
 
       if (userAnswer.checked && userAnswer.value === "true") {
         totalScore++;
-        break;
       }
     }
   }
   alert(
-    "Ваш результат:" + " " + totalScore + " " + "из" + " " + questions.length + " " + "Количество попыток:" + " " + tryNumber
+    `Ваш результат: ${totalScore} из ${questions.length}. Количество попыток: ${tryNumber}`
   );
 
   tryNumber++;
@@ -59,7 +58,6 @@ function resetTest() {
   for (let i = 0; i < radioBtn.length; i++) {
     radioBtn[i].checked = false;
   }
-  console.log(tryNubmer);
-}
+};
 
 buttonReset.addEventListener("click", resetTest);
