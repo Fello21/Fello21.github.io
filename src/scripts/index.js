@@ -17,6 +17,7 @@ const questions = document.getElementsByName("question");
 
 
 const calculateScore = () => {
+
   const firstTry = localStorage.getItem("tryNumber");
 if (firstTry == null) {
   localStorage.setItem("tryNumber", 1);
@@ -27,10 +28,10 @@ if (firstTry == null) {
 
   for (let i = 0; i < questions.length; i++) {
     let question = questions[i];
-    let answers = question.getElementsByTagName("input");
+    const answers = question.getElementsByTagName("input");
 
     for (let j = 0; j < answers.length; j++) {
-      let userAnswer = answers[j];
+      const userAnswer = answers[j];
 
       if (userAnswer.checked && userAnswer.value === "true") {
         totalScore++;
