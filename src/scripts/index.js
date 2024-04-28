@@ -15,12 +15,12 @@ for (let link of smoothScrollLinks) {
 const buttonCheck = document.getElementById("btn_check");
 const questions = document.getElementsByName("question");
 
-const firstTry = localStorage.getItem("tryNumber");
+
+const calculateScore = () => {
+  const firstTry = localStorage.getItem("tryNumber");
 if (firstTry == null) {
   localStorage.setItem("tryNumber", 1);
 }
-
-const calculateScore = () => {
   let tryNumber = localStorage.getItem("tryNumber");
 
   let totalScore = 0;
