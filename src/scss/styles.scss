@@ -50,12 +50,13 @@ main {
     margin: 10px 15px 10px 15px;
     font-size: large;
     color: #ece6cd;
+    cursor: pointer;
 
-    &-item {
-      width: 7%;
-      position: absolute;
-      left: 2%;
-      top: -15%;
+    &:hover {
+      color: #f9ac67;
+    }
+    &:active {
+      color: #ee6a59;
     }
   }
 
@@ -206,3 +207,47 @@ p {
     left: 47vw;
   }
 }
+
+/* Modal window */
+.block-test {
+  position: relative;
+}
+.result {
+  background-color: rgb(95, 228, 233);
+  box-shadow: 1px 1px 40px rgba(64, 245, 230, 0.301),
+    -1px -1px 40px rgba(64, 245, 230, 0.301);
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 20%;
+  position: absolute;
+  right: 40%;
+  top: 50%;
+}
+
+.result__title {
+text-align: center;
+}
+.result__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.result__content-item {
+  flex:1 50%;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.result__content-text {
+flex: 1 50%;
+height: fit-content;
+margin: 0 0 10px 0;
+}
+
+.result__content-btn {
+  margin: 5px auto;
+}
+.none {
+  display: none;
+}
+
+
